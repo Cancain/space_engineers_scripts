@@ -4,6 +4,7 @@ IMyPistonBase piston1;
 IMyPistonBase piston2;
 IMyPistonBase piston3;
 IMyPistonBase piston4;
+IMyPistonBase piston5;
 IMyPistonBase pistonHoriz1;
 IMyPistonBase pistonHoriz2;
 
@@ -24,6 +25,8 @@ void Main(string argument) {
 		piston3 = GridTerminalSystem.GetBlockWithName("PDown3") as IMyPistonBase;
 	if(piston4 == null)
 		piston4 = GridTerminalSystem.GetBlockWithName("PDown4") as IMyPistonBase;
+	if(piston5 == null)
+		piston5 = GridTerminalSystem.GetBlockWithName("up") as IMyPistonBase;
 		
     if(pistonHoriz1 == null)
 		pistonHoriz1 = GridTerminalSystem.GetBlockWithName("horiz") as IMyPistonBase;
@@ -39,6 +42,7 @@ void Main(string argument) {
 	screen.println("Piston Down 2: " + IsMax(piston2.DetailedInfo.Split(' ','\n')[3]));
 	screen.println("Piston Down 3: " + IsMax(piston3.DetailedInfo.Split(' ','\n')[3]));
 	screen.println("Piston Down 4: " + IsMax(piston4.DetailedInfo.Split(' ','\n')[3]));
+	screen.println("Piston up: " + piston5.DetailedInfo.Split(' ','\n')[3]);
     screen.println("Horizontal piston1: " + IsMax(pistonHoriz1.DetailedInfo.Split(' ','\n')[3]));
     screen.println("Horizontal piston2: " + IsMax(pistonHoriz2.DetailedInfo.Split(' ','\n')[3]));
 
