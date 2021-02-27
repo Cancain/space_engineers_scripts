@@ -21,6 +21,12 @@ void Main(string arg){
         piston5 = GridTerminalSystem.GetBlockWithName("up") as IMyPistonBase;
     }
 
+    piston1.SetValue("UpperLimit", float.MinValue);
+    piston2.SetValue("UpperLimit", float.MinValue);
+    piston3.SetValue("UpperLimit", float.MinValue);
+    piston4.SetValue("UpperLimit", float.MinValue);
+    piston5.SetValue("LowerLimit", float.MaxValue);
+
     piston1.ApplyAction("Reverse");
     piston2.ApplyAction("Reverse");
     piston3.ApplyAction("Reverse");
